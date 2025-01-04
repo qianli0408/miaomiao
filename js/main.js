@@ -1,4 +1,9 @@
 
+window.onload=function(){
+  
+  $('body').removeClass('is-loading');  
+}
+
 // 获取按钮和音频元素
 const playButton = document.getElementById('playAudioButton');
 const audioElement = document.getElementById('myAudio');
