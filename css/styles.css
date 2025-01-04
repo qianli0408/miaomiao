@@ -271,7 +271,7 @@ audio {
 .smoke-effect {
   font-size: 20px;
   cursor: pointer;
-  letter-spacing: 10px;
+  letter-spacing: 6px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -283,7 +283,7 @@ audio {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: #3b98e4;
   text-align: center;
-  width: 30%; /* 根据需要调整宽度 */
+  width: 40%; /* 根据需要调整宽度 */
   max-width: 600px;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8;
