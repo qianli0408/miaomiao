@@ -271,7 +271,7 @@ audio {
 .smoke-effect {
   font-size: 20px;
   cursor: pointer;
-  letter-spacing: 15px;
+  letter-spacing: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -289,7 +289,6 @@ audio {
   line-height: 1.8;
   opacity: 0.8;
   margin-bottom: 20px;
-  letter-spacing: 1px;
   word-spacing: 2px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* 较轻的文本阴影 */
   -webkit-text-stroke: 1px rgb(154, 45, 227); /* 设置文本描边 */
