@@ -1,77 +1,78 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>你的名字 - 个人主页</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="">
+  <title>你的名字</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div id="playAudioButton" class="overlay" onclick="this.style.display='none';">
-    点击开启
+  <div id="playAudioButton" class="overlay" onclick="startPage()">
+    <p class="smoke-effect" id="clickableText">点击进入</p>
   </div>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">关于我</a></li>
-        <li><a href="#skills">技能</a></li>
-        <li><a href="#portfolio">作品集</a></li>
-        <li><a href="#contact">联系我</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- 按钮 -->
-
-
-  <section id="about">
-    <h1>你好，我是你的名字</h1>
-    <p>简短介绍自己，比如职业、兴趣等。</p>
-  </section>
-
-  <section id="skills">
-    <h2>我的技能</h2>
-    <ul>
-      <li>技能1</li>
-      <li>技能2</li>
-      <li>技能3</li>
-      <!-- 添加更多技能 -->
-    </ul>
-  </section>
-
-  <section id="portfolio">
-    <h2>我的作品集</h2>
-    <p>这里可以列出或者链接到你的作品。</p>
-  </section>
-
-  <section id="contact">
-    <h2>联系我</h2>
-    <p>你可以通过以下方式联系我：</p>
-    <ul>
-      <li><i class="fas fa-envelope"></i>Email: your.email@example.com </i></li>
-      <li><i class="fas fa-phone"></i>Phone: +86-xxx-xxxx-xxxx </i></li>
-      <li><i class="fab fa-twitter"></i>Social Media: <a href="#">@yourSocialMediaHandle</i></a></li>
-    </ul>
-  </section>
-
-  <section>
-    <!-- 音频元素，设置为不自动播放 -->
-    <audio id="myAudio" controls auto muted preload="none">
-      <source src="./assets/background_music.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
-
+  <div id="modal" class="modal" onclick="hideModal()">
+    <img id="modal-image" class="modal-image"/>
+  </div>
   <footer>
-    <p>&copy; 2025 送给小玉的礼物。</p>
+    <p>&copy; 2021-2025 送给小玉的礼物</p>
+    <section>
+      <audio id="myAudio" controls autoplay muted preload="none">
+        <source src="./assets/audio/background_music.mp3" type="audio/mpeg">
+        您的浏览器版本太旧，请更新浏览器.
+      </audio>
+    </section>
   </footer>
+  <!--/*外层最大容器*/-->
+  <div class="wrap">
+    <!--    /*包裹所有元素的容器*/-->
+    <div class="cube">
+      <!--前面图片 -->
+      <div class="out_front">
+        <img src="./assets/img/1.jpg" class="pic" onclick="showModal(this)" />
+      </div>
+      <!--后面图片 -->
+      <div class="out_back">
+        <img src="./assets/img/2.jpg" class="pic" onclick="showModal(this)" />
+      </div>
+      <!--左图片 -->
+      <div class="out_left">
+        <img src="./assets/img/3.jpg" class="pic" onclick="showModal(this)" />
+      </div>
+      <div class="out_right">
+        <img src="./assets/img/4.jpg" class="pic" onclick="showModal(this)" />
+      </div>
+      <div class="out_top">
+        <img src="./assets/img/5.jpg" class="pic" onclick="showModal(this)" />
+      </div>
+      <div class="out_bottom">
+        <img src="./assets/img/6.jpg" class="pic" onclick="showModal(this)" />
+      </div>
+      <!--小正方体 -->
+      <span class="in_front">
+        <img src="./assets/img/7.jpg" class="in_pic" onclick="showModal(this)" />
+      </span>
+      <span class="in_back">
+        <img src="./assets/img/8.jpg" class="in_pic" onclick="showModal(this)" />
+      </span>
+      <span class="in_left">
+        <img src="./assets/img/9.jpg" class="in_pic" onclick="showModal(this)" />
+      </span>
+      <span class="in_right">
+        <img src="./assets/img/10.jpg" class="in_pic" onclick="showModal(this)" />
+      </span>
+      <span class="in_top">
+        <img src="./assets/img/11.jpg" class="in_pic" onclick="showModal(this)" />
+      </span>
+      <span class="in_bottom">
+        <img src="./assets/img/12.jpg" class="in_pic" onclick="showModal(this)" />
+      </span>
+    </div>
+  </div>
 
-  <!-- 引用外部 JavaScript 文件 -->
+  <canvas id="stars"></canvas>
   <script src="./js/main.js"></script>
 </body>
 
