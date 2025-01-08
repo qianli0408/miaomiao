@@ -55,6 +55,78 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // });
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//   const cube = document.querySelector('.cube');
+
+//   // 添加触摸开始事件监听器
+//   cube.addEventListener('touchstart', function() {
+//       cube.classList.add('hover');
+//   });
+
+//   // 添加触摸结束事件监听器
+//   cube.addEventListener('touchend', function() {
+//       cube.classList.remove('hover');
+//   });
+// });
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   const cube = document.querySelector('.cube');
+//   let isDragging = false;
+//   let startX, startY;
+//   let currentX = -80, currentY = -30; // 初始旋转角度
+
+//   // 鼠标事件
+//   cube.addEventListener('mousedown', (e) => {
+//     isDragging = true;
+//     startX = e.clientX;
+//     startY = e.clientY;
+//   });
+
+//   document.addEventListener('mousemove', (e) => {
+//     if (!isDragging) return;
+//     const deltaX = e.clientX - startX;
+//     const deltaY = e.clientY - startY;
+//     currentX += deltaY * 0.1; // 调整旋转速度
+//     currentY += deltaX * 0.1; // 调整旋转速度
+//     updateCubeTransform();
+//     startX = e.clientX;
+//     startY = e.clientY;
+//   });
+
+//   document.addEventListener('mouseup', () => {
+//     isDragging = false;
+//   });
+
+//   // 触摸事件
+//   cube.addEventListener('touchstart', (e) => {
+//     isDragging = true;
+//     startX = e.touches[0].clientX;
+//     startY = e.touches[0].clientY;
+//   });
+
+//   document.addEventListener('touchmove', (e) => {
+//     if (!isDragging) return;
+//     const deltaX = e.touches[0].clientX - startX;
+//     const deltaY = e.touches[0].clientY - startY;
+//     currentX += deltaY * 0.1; // 调整旋转速度
+//     currentY += deltaX * 0.1; // 调整旋转速度
+//     updateCubeTransform();
+//     startX = e.touches[0].clientX;
+//     startY = e.touches[0].clientY;
+//   });
+
+//   document.addEventListener('touchend', () => {
+//     isDragging = false;
+//   });
+
+//   // 更新 .cube 的 transform 属性
+//   function updateCubeTransform() {
+//     cube.style.transform = `rotateX(${currentX}deg) rotateY(${currentY}deg)`;
+//   }
+
+//   // 其他现有代码...
+// });
+
 document.addEventListener('DOMContentLoaded', (event) => {
   const clickableText = document.getElementById('clickableText');
 
